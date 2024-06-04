@@ -33,31 +33,7 @@ const iMieiDati = reactive({
 				name: "Adam",
 				comment:
 					"We are a gallery vehicle dealer. Before we met this site, our sales were sluggish.",
-				img: "testimonial2-1.png",
-			},
-			{
-				name: "Adam",
-				comment:
-					"We are a gallery vehicle dealer. Before we met this site, our sales were sluggish.",
-				img: "testimonial2-1.png",
-			},
-			{
-				name: "Adam",
-				comment:
-					"We are a gallery vehicle dealer. Before we met this site, our sales were sluggish.",
-				img: "testimonial2-1.png",
-			},
-			{
-				name: "Adam",
-				comment:
-					"We are a gallery vehicle dealer. Before we met this site, our sales were sluggish.",
-				img: "testimonial2-1.png",
-			},
-			{
-				name: "Adam",
-				comment:
-					"We are a gallery vehicle dealer. Before we met this site, our sales were sluggish.",
-				img: "testimonial2-1.png",
+				img: "man1.png",
 			},
 		],
 	},
