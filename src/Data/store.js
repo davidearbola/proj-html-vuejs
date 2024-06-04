@@ -87,6 +87,155 @@ const iMieiDati = reactive({
 			},
 		],
 	},
+	// Dati Francesco
+	cardLists: [
+		{
+			marchio: "BMW",
+			modello: "BMW M9",
+			tipo: "Cabrio",
+			prezzo: "34.000",
+			carburante: "Electric",
+			immagine:
+				"bmw-8-series-convertible-technical-data-sp-desktop-400x300.jpg",
+			heart: false,
+		},
+		{
+			marchio: "BMW",
+			modello: "BMW M9",
+			tipo: "Cabrio",
+			prezzo: "34.000",
+			carburante: "Diesel",
+			immagine: "bmw88-400x300.jpg",
+			heart: false,
+		},
+		{
+			marchio: "BMW",
+			modello: "BMW M9",
+			tipo: "Cabrio",
+			prezzo: "34.000",
+			carburante: "Gasoline",
+			immagine: "bmw442-400x300.jpg",
+			heart: false,
+		},
+		{
+			marchio: "Seat",
+			modello: "Seat Ibiza",
+			tipo: "Hatchback",
+			prezzo: "27.000",
+			carburante: "Electric",
+			immagine: "yeni-ibiza-2-400x300.jpg",
+			heart: false,
+		},
+		{
+			marchio: "Seat",
+			modello: "Seat Arona",
+			tipo: "Suv",
+			prezzo: "60.000",
+			carburante: "Gasoline",
+			immagine: "makyajli-2022-seat-arona-1-400x300.jpg",
+			heart: false,
+		},
+		{
+			marchio: "Volswagen",
+			modello: "Volswagen Taigo",
+			tipo: "SUV",
+			prezzo: "68.000",
+			carburante: "Electric",
+			immagine: "vw-taigo3832-400x300.jpg",
+			heart: false,
+		},
+		{
+			marchio: "Volswagen",
+			modello: "Volswagen T-Cross",
+			tipo: "SUV",
+			prezzo: "47.000",
+			carburante: "Diesel",
+			immagine: "2019-vw-t-cross-400x300.jpg",
+			heart: false,
+		},
+		{
+			marchio: "Volswagen",
+			modello: "Volswagen Passat",
+			tipo: "Sedan",
+			prezzo: "32.000",
+			carburante: "Diesel",
+			immagine: "volkswagen-passat-1280x720-1-400x300.jpg",
+			heart: false,
+		},
+	],
+	// Dati Luca
+	// Componente Carosello
+	CaroselloTitolo: "Buy And Sell Your Car At Its Value",
+	CaroselloSottotitolo: "Find the right price and dealer.",
+	Carosello: [
+		{
+			CaroselloTitolo: "Buy And Sell Your Car At Its Value",
+			firstImage: "./src/assets/Img/slider-autocar-5.jpg",
+		},
+		{
+			CaroselloTitolo: "The Easiest Way to Buy And Sell Vehicles",
+			firstImage: "./src/assets/Img/slider-autocar-6.jpg",
+		},
+	],
+	number: 0,
+
+	// Componente SearchCar
+	SearchCar: {
+		AllCategories: [
+			"Cabrio",
+			"Coupe",
+			"Hatchback",
+			"Pick up",
+			"Seden",
+			"Suv",
+		],
+		Brand: [
+			"Audi",
+			"BMW",
+			"Ford",
+			"Hyundai",
+			"Opel",
+			"Seat",
+			"Skoda",
+			"Toyota",
+			"Volswagen",
+		],
+		FuelType: ["Diesel", "Electric", "Gasoline", "LPG"],
+		Transmission: ["Automatic", "Manual", "Semiautomatic", "Touch"],
+		Status: ["2nd Hand", "By Owner", "From The Gallery", "New"],
+	},
+	Models: [
+		{
+			Immagine: "./src/assets/Img/cabrio.jpg",
+			Titolo: "Cabrio",
+			Sottotitolo: "3 Listings",
+		},
+		{
+			Immagine: "./src/assets/Img/coupe.jpg",
+			Titolo: "Coupe",
+			Sottotitolo: "0 Listings",
+		},
+		{
+			Immagine: "./src/assets/Img/hatchback.jpg",
+			Titolo: "Hathback",
+			Sottotitolo: "2 Listings",
+		},
+		{
+			Immagine: "./src/assets/Img/Pickup.jpg",
+			Titolo: "Pick up",
+			Sottotitolo: "0 Listings",
+		},
+		{
+			Immagine: "./src/assets/Img/Sedan.jpg",
+			Titolo: "Sedan",
+			Sottotitolo: "3 Listings",
+		},
+		{
+			Immagine: "./src/assets/Img/Suv.jpg",
+			Titolo: "Suv",
+			Sottotitolo: "4 Listings",
+		},
+	],
 });
 
 export default iMieiDati;

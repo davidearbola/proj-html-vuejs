@@ -13,34 +13,54 @@ export default {
 			return risultato.href;
 		},
 	},
+	mounted() {
+		const cards = document.querySelectorAll(".my_animation");
+
+		cards.forEach((card) => {
+			card.addEventListener("mousemove", (e) => {
+				let cardInnerHeight = card.clientHeight;
+				let cardInnerWidth = card.clientWidth;
+
+				let rect = card.getBoundingClientRect();
+				let cardXposition = e.clientX - rect.left;
+				let cardYposition = e.clientY - rect.top;
+
+				let x = (cardInnerHeight / 2.5 - cardXposition) / 15;
+				let y = (cardInnerWidth / 1.25 - cardYposition) / 15;
+
+				card.style.transform =
+					"rotateY(" + x + "deg) rotateX(" + y + "deg)";
+			});
+		});
+	},
 };
 </script>
 
 <template>
 	<div id="recent" class="py-5 px-3 text-center">
-		<div class="w-75 mx-auto">
-			<span class="icon_circle_recent">
-				<i class="fa-regular fa-thumbs-up"></i><br />
-			</span>
-			<h3>{{ Store.recent.title }}</h3>
-			<p>{{ Store.recent.subtitle }}</p>
-			<div class="row flex-nowrap">
-				<div
-					v-for="article in Store.recent.articleCar"
-					class="col-3 align-self-stretch"
-				>
-					<div class="my_card p-3 rounded h-100 p-">
-						<img :src="getImgPath(article.img.medium)" alt="" />
-						<p>
-							{{ article.release }}
-						</p>
-						<h5>{{ article.title }}</h5>
-						<p>{{ article.article_text }}</p>
-						<button class="my_btn">MORE</button>
-					</div>
+		<!-- <div class="w-75 mx-auto"> -->
+		<span class="icon_circle_recent">
+			<i class="fa-regular fa-thumbs-up"></i><br />
+		</span>
+		<h3>{{ Store.recent.title }}</h3>
+		<p>{{ Store.recent.subtitle }}</p>
+		<div class="row flex-nowrap">
+			<div
+				v-for="article in Store.recent.articleCar"
+				class="col-3 align-self-stretch my_animation"
+			>
+				<div class="my_card p-3 rounded h-100 p-">
+					<img :src="getImgPath(article.img.medium)" alt="" />
+					<p>
+						{{ article.release }}
+					</p>
+					<h5>{{ article.title }}</h5>
+					<p>{{ article.article_text }}</p>
+					<button class="my_btn">MORE</button>
 				</div>
 			</div>
 		</div>
+		<!-- </div> -->
 	</div>
 </template>
 

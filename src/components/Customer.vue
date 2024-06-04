@@ -47,43 +47,43 @@ export default {
 
 <template>
 	<div id="customer" class="py-5 px-3 text-white text-center">
-		<div class="w-75 mx-auto">
-			<i class="fa-regular fa-thumbs-up"></i><br />
-			<i class="fa-regular fa-star"></i>
-			<i class="fa-regular fa-star"></i>
-			<i class="fa-regular fa-star"></i>
-			<h3>{{ Store.customer.title }}</h3>
-			<p>{{ Store.customer.subtitle }}</p>
-			<div class="row py-3">
-				<div v-for="testimonial in visibleCards" class="col-3">
-					<div class="my_card rounded h-100">
-						<p>
-							{{ testimonial.comment }}
-						</p>
-						<img :src="getImgPath(testimonial.img)" class="mt-3" />
-						<p class="mt-3">{{ testimonial.name }}</p>
-					</div>
+		<!-- <div class="w-75 mx-auto"> -->
+		<i class="fa-regular fa-thumbs-up"></i><br />
+		<i class="fa-regular fa-star"></i>
+		<i class="fa-regular fa-star"></i>
+		<i class="fa-regular fa-star"></i>
+		<h3>{{ Store.customer.title }}</h3>
+		<p>{{ Store.customer.subtitle }}</p>
+		<div class="row py-3">
+			<div v-for="testimonial in visibleCards" class="col-3">
+				<div class="my_card rounded h-100">
+					<p>
+						{{ testimonial.comment }}
+					</p>
+					<img :src="getImgPath(testimonial.img)" class="mt-3" />
+					<p class="mt-3">{{ testimonial.name }}</p>
 				</div>
 			</div>
-			<div class="d-flex justify-content-center">
-				<div
-					:class="{
-						btnBlack: clickPrev,
-						btnGrey: !clickPrev,
-					}"
-					class="my_btn_customer me-1"
-					@click="previous()"
-				></div>
-				<div
-					:class="{
-						btnBlack: clickNext,
-						btnGrey: !clickNext,
-					}"
-					class="my_btn_customer"
-					@click="next()"
-				></div>
-			</div>
 		</div>
+		<div class="d-flex justify-content-center">
+			<div
+				:class="{
+					btnBlack: clickPrev,
+					btnGrey: !clickPrev,
+				}"
+				class="my_btn_customer me-1"
+				@click="previous()"
+			></div>
+			<div
+				:class="{
+					btnBlack: clickNext,
+					btnGrey: !clickNext,
+				}"
+				class="my_btn_customer"
+				@click="next()"
+			></div>
+		</div>
+		<!-- </div> -->
 	</div>
 </template>
 
