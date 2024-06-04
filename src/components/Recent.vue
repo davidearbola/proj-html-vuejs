@@ -12,6 +12,12 @@ export default {
 			let risultato = new URL(`../assets/Img/${path}`, import.meta.url);
 			return risultato.href;
 		},
+		removeTransform() {
+			const cards = document.querySelectorAll(".my_animation");
+			cards.forEach((card) => {
+				card.style.transform = "rotateY(0deg) rotateX(0deg)";
+			});
+		},
 	},
 	mounted() {
 		const cards = document.querySelectorAll(".my_animation");
@@ -47,6 +53,7 @@ export default {
 		<div class="row flex-nowrap">
 			<div
 				v-for="article in Store.recent.articleCar"
+				@mouseleave="removeTransform()"
 				class="col-3 align-self-stretch my_animation"
 			>
 				<div class="my_card p-3 rounded h-100 p-">
