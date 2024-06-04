@@ -115,16 +115,19 @@ img {
 
 .my_btn_customer {
 	height: 8px;
-	width: 50px;
 	border-radius: 5px;
 	background-color: gray;
 }
 
 .btnGrey {
 	background-color: grey;
+	width: 50px;
+	transition: all 500ms;
 }
 
 .btnBlack {
-	background-color: #222;
+	background-color: black;
+	width: 90px;
+	transition: all 500ms;
 }
 </style>

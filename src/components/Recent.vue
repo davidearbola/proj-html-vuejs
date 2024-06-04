@@ -17,7 +17,7 @@ export default {
 </script>
 
 <template>
-	<div id="recent" class="p-5 text-center">
+	<div id="recent" class="py-5 px-3 text-center">
 		<!-- <div class="w-75 mx-auto"> -->
 		<span class="icon_circle_recent">
 			<i class="fa-regular fa-thumbs-up"></i><br />
@@ -29,7 +29,7 @@ export default {
 				v-for="article in Store.recent.articleCar"
 				class="col-3 align-self-stretch"
 			>
-				<div class="my_card rounded h-100">
+				<div class="my_card p-3 rounded h-100 p-">
 					<img :src="getImgPath(article.img.medium)" alt="" />
 					<p>
 						{{ article.release }}
@@ -67,7 +67,6 @@ p {
 	background-color: white;
 	color: black;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	padding: 0.5rem;
 }
 
 img {
