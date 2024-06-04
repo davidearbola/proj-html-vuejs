@@ -36,6 +36,7 @@ export default {
 					</p>
 					<h5>{{ article.title }}</h5>
 					<p>{{ article.article_text }}</p>
+					<button class="my_btn">MORE</button>
 				</div>
 			</div>
 		</div>
@@ -72,5 +73,12 @@ p {
 img {
 	width: 100%;
 	display: inline-block;
+}
+
+.my_btn {
+	background-color: black;
+	padding: 1.5rem 3rem;
+	color: white;
+	border-style: none;
 }
 </style>
