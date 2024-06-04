@@ -18,29 +18,29 @@ export default {
 
 <template>
 	<div id="recent" class="py-5 px-3 text-center">
-		<!-- <div class="w-75 mx-auto"> -->
-		<span class="icon_circle_recent">
-			<i class="fa-regular fa-thumbs-up"></i><br />
-		</span>
-		<h3>{{ Store.recent.title }}</h3>
-		<p>{{ Store.recent.subtitle }}</p>
-		<div class="row flex-nowrap">
-			<div
-				v-for="article in Store.recent.articleCar"
-				class="col-3 align-self-stretch"
-			>
-				<div class="my_card p-3 rounded h-100 p-">
-					<img :src="getImgPath(article.img.medium)" alt="" />
-					<p>
-						{{ article.release }}
-					</p>
-					<h5>{{ article.title }}</h5>
-					<p>{{ article.article_text }}</p>
-					<button class="my_btn">MORE</button>
+		<div class="w-75 mx-auto">
+			<span class="icon_circle_recent">
+				<i class="fa-regular fa-thumbs-up"></i><br />
+			</span>
+			<h3>{{ Store.recent.title }}</h3>
+			<p>{{ Store.recent.subtitle }}</p>
+			<div class="row flex-nowrap">
+				<div
+					v-for="article in Store.recent.articleCar"
+					class="col-3 align-self-stretch"
+				>
+					<div class="my_card p-3 rounded h-100 p-">
+						<img :src="getImgPath(article.img.medium)" alt="" />
+						<p>
+							{{ article.release }}
+						</p>
+						<h5>{{ article.title }}</h5>
+						<p>{{ article.article_text }}</p>
+						<button class="my_btn">MORE</button>
+					</div>
 				</div>
 			</div>
 		</div>
-		<!-- </div> -->
 	</div>
 </template>
 
