@@ -50,7 +50,7 @@ export default {
 					</p>
 					<p class="py-1">{{ car.tipo }}</p>
 					<p class="py-1">
-						<span class="ms-2"
+						<span class="me-2"
 							><i
 								class="my_me fa-sharp fa-solid fa-dollar-sign"
 							></i>
