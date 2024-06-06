@@ -1,20 +1,58 @@
 <!-- ------------------------ SPIEGAZIONE PROGETTO ---------------------------- -->
 
-Il layout è stato suddiviso nel seguente modo: Dihep: Header e Footer Luca: Main (Carosello e ricerca auto) Francesco: Main (Card auto e Info buy/sell) Davide: Main(Customer e recente)
+Replica del sito garantiwebtasarim.com/wordpress/autocar/
 
-Utilizziamo Bootstrap e FontAwesome: FontAwesome: <script src="https://kit.fontawesome.com/ee64cb3605.js" crossorigin="anonymous"></script> Bootstrap CSS: Bootstrap Javascript: <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<!--  -->
 
-Componenti: PageHeader: Navbar (Dihep)
+Sviluppatori: Dihep, Francesco, Luca, Davide
 
-PageMain: Carosello, SearchCar( Luca)
-CardAuto, InfoCar (Francesco)
-Customer e Recent (Davide)
+<!--  -->
 
-PageFooter: Footer (Dihep)
-(I componenti PageHeader - PageFooter li abbamo tutti, i sotto componenti invece li prendiamo da github)
+Framework e librerie utilizzate: Vue.js, Vite, Bootstrap, FontAwesome
 
-Utilizziamo uno store.js per immagazzinare i vari dati.
+<!--  -->
 
-Tutte le immagini le abbiamo messe nella cartella src/assets, creiamo le cartelle Icone e Img
+Struttura dati:
+-Data: Store.js (contiene tutti i dati necessari per il funzionamento dei componenti (array, oggetti, variabili) visibili a tutti i componenti)
+-Immagini: contenute tutte in /assets/img o icone
 
-Lo store.js lo abbiamo messo in src/data/
+<!--  -->
+
+Struttura componenti:
+-PageHeader
+.....AutocarNavbar ( Developed by: Dihep)
+
+<!--  -->
+
+-PageMain
+.....Carosello ( Developed by: Luca)
+.....SearchCar ( Developed by: Luca)
+.....CardAuto ( Developed by: Francesco)
+.....InfoCar ( Developed by: Francesco)
+.....Customer ( Developed by: Davide)
+.....Recent ( Developed by: Davide)
+
+<!--  -->
+
+-PageFooter
+.....AutocarFooter ( Developed by: Dihep)
+
+<!--  -->
+
+Spiegazione funzionalità dei componenti:
+AutocarNavbar:
+Carosello:
+SearchCar:
+CardAuto:
+InfoCar:
+Customer:
+
+<!-- Sezione che contiene le card dei customer con le loro immagini e i loro commenti oltre che al titolo ed al sottotitolo
+Ho creato una struttura dati nello store.js che contiene all'interno di un array di oggetti tutti i titoli, i sottotitoli, i testi e le immagini che vengono inserite nelle card
+Le card vengono create tramite ciclo v-for e viene aggiunta la funzionalità di slide per visualizzare le card seguenti (cardvisibili sempre 4) -->
+
+Recent:
+
+<!-- Sezione che contiene 4 card con all'interno l'estratto di un articolo su dei nuovi modelli di auto, ogni card contiene testo,   immagine e titolo. Come per customer creo in store.js un array di oggetti che contiene tutti i dati necessari a comporre i contenuti  delle card. Anche per queste card uso un ciclo v-for per la loro creazione dinamica. Alle card viene aggiunta l'animazione di    rotazione in base alla posizione del mouse -->
+
+AutocarFooter:
