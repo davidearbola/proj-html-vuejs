@@ -7,6 +7,12 @@ export default {
 	data() {
 		return {
 			Store,
+			numero24: 0,
+			numero240: 0,
+			ciao: "",
+			timer24: null,
+			timer240: null,
+			animationExecuted: false,
 		};
 	},
 	methods: {
@@ -14,17 +20,70 @@ export default {
 			let risultato = new URL(`../assets/Img/${path}`, import.meta.url);
 			return risultato.href;
 		},
+		counted24() {
+			if (!this.timer24) {
+				this.timer24 = setInterval(() => {
+					this.numero24++;
+					if (this.numero24 == 24) {
+						clearInterval(this.timer24);
+						this.timer24 = null;
+						console.log("interrotto");
+					}
+				}, 70);
+			}
+		},
+		counted240() {
+			if (!this.timer240) {
+				this.timer240 = setInterval(() => {
+					this.numero240 += 10;
+					if (this.numero240 == 240) {
+						clearInterval(this.timer240);
+						this.timer240 = null;
+						console.log("interrotto");
+					}
+				}, 70);
+			}
+		},
+		scroll() {
+			window.addEventListener("scroll", () => {
+				let elemento = document.getElementById("scroll");
+				this.isElementInViewport(elemento);
+				if (
+					this.isElementInViewport(elemento) &&
+					!this.animationExecuted
+				) {
+					this.animationExecuted = true;
+					this.counted24();
+					this.counted240();
+				}
+			});
+		},
+		isElementInViewport(el) {
+			const rect = el.getBoundingClientRect();
+			return (
+				rect.top >= 0 &&
+				rect.left >= 0 &&
+				rect.bottom <=
+					(window.innerHeight ||
+						document.documentElement.clientHeight) &&
+				rect.right <=
+					(window.innerWidth || document.documentElement.clientWidth)
+			);
+		},
 	},
 	created() {},
-	mounted() {},
+	mounted() {
+		this.scroll();
+	},
 	computed: {},
 };
 </script>
 
 <template>
+	<div class="text-center"></div>
 	<div class="bg-light w-75 mx-auto py-2">
 		<div class="row justify-content-center">
-			<div class="col-5 p-3 bk-point position-relative">
+			<div id="scroll" class="col-5 p-3 bk-point position-relative">
 				<img
 					class="z-n1 w-100 ruota"
 					:src="getImg('circle-auto-car-1.png')"
@@ -39,13 +98,13 @@ export default {
 				<div
 					class="twoForTwo position-absolute bg-dark leftCircle text-center p-2"
 				>
-					<h4 class="fw-bolder">24</h4>
+					<h4 class="fw-bolder">{{ numero24 }}</h4>
 					<p class="my_fs">Years of Experience</p>
 				</div>
 				<div
 					class="twoForTwo position-absolute bg-dark rightCircle text-center p-2"
 				>
-					<h4 class="fw-bolder">240</h4>
+					<h4 class="fw-bolder">{{ numero240 }}</h4>
 					<p class="my_fs">Special Expert Team</p>
 				</div>
 			</div>

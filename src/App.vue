@@ -9,34 +9,37 @@ export default {
 		PageMain,
 		PageFooter,
 	},
-	methods: {},
-	mounted() {
-		let outline = document.querySelector(".outline");
-		let cursor = document.querySelector(".cursor");
-		document.addEventListener("mousemove", function (e) {
-			let x = e.clientX;
-			let y = e.clientY;
+	methods: {
+		handleMouseMove(e) {
+			const x = e.clientX;
+			const y = e.clientY;
 
-			outline.style.transform = `translate(calc(${x}px - 50%), calc(${y}px - 50%))`;
-			cursor.style.transform = `translate(calc(${x}px - 50%), calc(${y}px - 50%))`;
-		});
-		document.addEventListener("mouseleave", function () {
-			outline.style.display = "none";
-			cursor.style.display = "none";
-		});
-
-		document.addEventListener("mouseenter", function () {
-			outline.style.display = "block";
-			cursor.style.display = "block";
-		});
+			this.$refs.outline.style.transform = `translate(calc(${x}px - 50%), calc(${y}px - 50%))`;
+			this.$refs.cursor.style.transform = `translate(calc(${x}px - 50%), calc(${y}px - 50%))`;
+		},
+		handleMouseLeave() {
+			this.$refs.outline.style.display = "none";
+			this.$refs.cursor.style.display = "none";
+		},
+		handleMouseEnter() {
+			this.$refs.outline.style.display = "block";
+			this.$refs.cursor.style.display = "block";
+		},
 	},
+	mounted() {},
 };
 </script>
 
 <template>
-	<div class="cursor"></div>
-	<div class="outline"></div>
-	<PageMain />
+	<div
+		@mousemove="handleMouseMove"
+		@mouseleave="handleMouseLeave"
+		@mouseenter="handleMouseEnter"
+	>
+		<div ref="cursor" class="cursor"></div>
+		<div ref="outline" class="outline"></div>
+		<PageMain />
+	</div>
 </template>
 
 <style scoped>
