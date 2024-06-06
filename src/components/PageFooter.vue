@@ -1,7 +1,26 @@
 <script>
-export default {};
+import store from "../Data/store.js";
+import AutocarFooter from "./AutocarFooter.vue";
+
+export default {
+	components: {
+		AutocarFooter,
+	},
+
+	data() {
+		return {
+			store,
+		};
+	},
+	methods: {},
+	created() {},
+	mounted() {},
+	computed: {},
+};
 </script>
 
-<template></template>
+<template>
+	<AutocarFooter />
+</template>
 
 <style scoped></style>

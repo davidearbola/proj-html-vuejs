@@ -38,7 +38,9 @@ export default {
 	>
 		<div ref="cursor" class="cursor"></div>
 		<div ref="outline" class="outline"></div>
+		<PageHeader />
 		<PageMain />
+		<PageFooter />
 	</div>
 </template>
 

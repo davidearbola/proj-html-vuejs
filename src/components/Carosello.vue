@@ -88,7 +88,7 @@ export default {
 					</h1>
 					<p class="fw-bold">{{ store.CaroselloSottotitolo }}</p>
 					<div
-						class="d-inline-flex align-items-center gap-2 me-5 cursorPointer fw-bold"
+						class="d-inline-flex align-items-center gap-2 ms-5 cursorPointer fw-bold"
 					>
 						<p class="m-0">Learn More</p>
 						<i class="fa-solid fa-arrow-right"></i>
@@ -111,7 +111,7 @@ export default {
 }
 
 #caroselloHeight {
-	height: 90vh;
+	height: calc(100vh - 5rem);
 }
 
 .imgBack {
@@ -121,6 +121,7 @@ export default {
 	object-position: bottom;
 	transition: 0.5s ease-in-out;
 }
+
 .widthImg {
 	width: 33%;
 }

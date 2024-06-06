@@ -1,12 +1,12 @@
 <script>
-import Store from "../Data/store.js";
+import store from "../Data/store.js";
 
 export default {
 	components: {},
 
 	data() {
 		return {
-			Store,
+			store,
 		};
 	},
 	methods: {
@@ -16,10 +16,10 @@ export default {
 		},
 
 		addFav(index) {
-			if (this.Store.cardLists[index].heart == false) {
-				this.Store.cardLists[index].heart = true;
+			if (this.store.cardLists[index].heart == false) {
+				this.store.cardLists[index].heart = true;
 			} else {
-				this.Store.cardLists[index].heart = false;
+				this.store.cardLists[index].heart = false;
 			}
 		},
 	},
@@ -33,7 +33,7 @@ export default {
 	<div class="bg-light w-75 mx-auto py-2">
 		<div class="row p-4 align-content-center">
 			<div
-				v-for="(car, i) in Store.cardLists"
+				v-for="(car, i) in store.cardLists"
 				class="b_shad border col-3 p-4 my-2"
 			>
 				<div>
@@ -44,30 +44,30 @@ export default {
 					/>
 				</div>
 				<div class="position-relative">
-					<p class="py-1">
+					<p class="my-1">
 						{{ car.modello }}
 						<span><i class="fa-solid fa-circle-check"></i></span>
 					</p>
-					<p class="py-1">{{ car.tipo }}</p>
-					<p class="py-1">
-						<span class="me-2"
+					<p class="mb-1">{{ car.tipo }}</p>
+					<p class="mb-1">
+						<span class="me-2 my_fs"
 							><i
 								class="my_me fa-sharp fa-solid fa-dollar-sign"
 							></i>
 							{{ car.prezzo }}</span
 						>
-						<span
+						<span class="my_fs"
 							><i class="mx-1 fa-solid fa-car"></i>
 							{{ car.marchio }}</span
 						>
-						<span
+						<span class="my_fs"
 							><i class="mx-1 fa-solid fa-gas-pump"></i>
 							{{ car.carburante }}</span
 						>
 					</p>
 					<span
 						@click="addFav(i)"
-						class="pb-1 position-absolute bottom-0 end-0"
+						class="position-absolute bottom-0 end-0"
 						:class="car.heart == false ? 'lGrey' : 'lRed'"
 						><i class="color_hov fa-solid fa-heart"></i
 					></span>
@@ -98,5 +98,9 @@ export default {
 
 .color_hov:hover {
 	color: rgb(231, 117, 117);
+}
+
+.my_fs {
+	font-size: 0.7rem;
 }
 </style>
