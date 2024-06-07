@@ -30,6 +30,10 @@ export default {
 				store.number++;
 			}
 		},
+		getImgPath(path) {
+			let risultato = new URL(`../assets/Img/${path}`, import.meta.url);
+			return risultato.href;
+		},
 	},
 };
 </script>
@@ -51,7 +55,7 @@ export default {
 						'opacity-0': caroselloImg !== i,
 					}"
 					alt=""
-					:src="immagine.firstImage"
+					:src="getImgPath(immagine.firstImage)"
 				/>
 			</div>
 
