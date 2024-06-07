@@ -41,6 +41,11 @@ Struttura componenti:
 
 Spiegazione funzionalità dei componenti:
 AutocarNavbar:
+
+<!--
+Header della pagina: una navbar per la navigazione della pagina, con logo, info, link a sezioni e funzionalità del sito ed un hamburger menu per l'apertura di un pannello (offcanvas) con informazioni aggiuntive. L'inserimento di link ed informazioni è automatizzato tramite la struttura dati.
+-->
+
 Carosello:
 
 <!--
@@ -90,3 +95,12 @@ Sezione che contiene 4 card con all'interno l'estratto di un articolo su dei nuo
 -->
 
 AutocarFooter:
+
+<!--
+Footer della pagina diviso nelle seguenti quattro sezioni.
+1. Logo, informazioni su Autocar e link ai social.
+2. Iscrizione alla newsletter.
+3. Menù per impostazioni account utente.
+4. Menù con link utili.
+I dati sono aggiunti in maniera automatica tramite la struttura dati.
+-->
